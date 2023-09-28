@@ -23,7 +23,7 @@
             <TextBlock Text="New phone"/>
 
             <TextBox>
-                <TextBox.Text>
+                <TextBox.Text >
                     <Binding Path="UserPhone">
                         <Binding.ValidationRules>
                             <ExceptionValidationRule/>
@@ -41,6 +41,6 @@
         </StackPanel>
         <Button Grid.Row="1" Content="Edit staff"
                 Command="{Binding EditUser}"
-                CommandParameter="{Binding ElementName=EditUserWdn}"/>
+                CommandParameter="{Binding ElementName=EditUserWnd}"/>
     </Grid>
 </Window>

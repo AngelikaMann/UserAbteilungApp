@@ -18,7 +18,7 @@
                 </TabItem.Header>
                 <TabItem.ContextMenu>
                     <ContextMenu>
-                        <MenuItem Header="Edit" Command="{Binding OpenEditItemWdn}"/>
+                        <MenuItem Header="Edit" Command="{Binding OpenEditItemWnd}"/>
                         <MenuItem Header="Delete" Command="{Binding DeleteItem}"/>
                     </ContextMenu>
                 </TabItem.ContextMenu>
@@ -48,7 +48,7 @@
                 </TabItem.Header>
                 <TabItem.ContextMenu>
                     <ContextMenu>
-                        <MenuItem Header="Edit" Command="{Binding OpenEditItemWdn}"/>
+                        <MenuItem Header="Edit" Command="{Binding OpenEditItemWnd}"/>
                         <MenuItem Header="Delete" Command="{Binding DeleteItem}"/>
                     </ContextMenu>
                 </TabItem.ContextMenu>
@@ -76,7 +76,7 @@
                 </TabItem.Header>
                 <TabItem.ContextMenu>
                     <ContextMenu>
-                        <MenuItem Header="Edit" Command="{Binding OpenEditItemWdn}" />
+                        <MenuItem Header="Edit" Command="{Binding OpenEditItemWnd}" />
                         <MenuItem Header="Delete" Command="{Binding DeleteItem}"/>
                     </ContextMenu>
                 </TabItem.ContextMenu>

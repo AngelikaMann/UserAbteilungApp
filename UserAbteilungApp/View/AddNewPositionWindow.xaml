@@ -19,8 +19,9 @@
             <TextBlock Text="Name"/>
             <TextBox Name="NameBlock" Text="{Binding PositionName}"/>
             <TextBlock Text="Salary"/>
-            <TextBox Name="SalaryBlock" PreviewTextInput="PreviewTextInput"
-                     Text="{Binding PositionSalary}"/>
+            <TextBox Name="SalaryBlock" Text="{Binding PositionSalary}"
+                     PreviewTextInput="PreviewTextInput"/>
+                     
             <TextBlock Text="Max vacancies"/>
             <TextBox Name="MaxNumberBlock" PreviewTextInput="PreviewTextInput"
                      Text="{Binding PositionMaxNumber}"/>

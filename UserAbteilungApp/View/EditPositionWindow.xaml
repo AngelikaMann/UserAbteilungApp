@@ -17,11 +17,11 @@
                     VerticalAlignment="Center"
                     Width="200">
             <TextBlock Text="New name"/>
-            <TextBox Text="{Binding PositionName}" PreviewTextInput="PreviewTextInput"/>
+            <TextBox Text="{Binding PositionName}" />
             <TextBlock Text="New Salary"/>
             <TextBox Text="{Binding PositionSalary}" PreviewTextInput="PreviewTextInput"/>
-            <TextBlock Text="New max vacancies"/>
-            <TextBox Text="{Binding PositionMaxNumber}"/>
+            <TextBlock Text="New max of vacancies"/>
+            <TextBox Text="{Binding PositionMaxNumber}" PreviewTextInput="PreviewTextInput" />
             <TextBlock Text="New department"/>
             <ComboBox ItemsSource="{Binding AllDepartments}"
                       DisplayMemberPath="Name"
@@ -30,7 +30,7 @@
         </StackPanel>
         <Button Grid.Row="1" Content="Edit position"
              Command="{Binding EditPosition}"
-                CommandParameter="{Binding ElementName=EditPositionWdn}"
+                CommandParameter="{Binding ElementName=EditPositionWnd}"
         />
     </Grid>
 </Window>

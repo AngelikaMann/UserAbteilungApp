@@ -15,7 +15,6 @@ namespace UserAbteilungApp.View
             InitializeComponent();
             DataContext = new DataManageVM();
             DataManageVM.SelectedPosition = positionToEdit;
-
             DataManageVM.PositionName = positionToEdit.Name;
             DataManageVM.PositionSalary = positionToEdit.Salary;
             DataManageVM.PositionMaxNumber = positionToEdit.MaxNumber;

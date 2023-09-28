@@ -111,12 +111,12 @@ namespace UserAbteilungApp.ViewModel
         }
 
 
-        private RelayCommand openeditItemWdn;
-        public RelayCommand OpenEditItemWdn
+        private RelayCommand openEditItemWnd;
+        public RelayCommand OpenEditItemWnd
         {
             get
             {
-                return openeditItemWdn ?? new RelayCommand(obj =>
+                return openEditItemWnd ?? new RelayCommand(obj =>
                 {
                     //If User
                     if (SelectedTabItem.Name == "UsersTab" && SelectedUser != null)
@@ -212,6 +212,7 @@ namespace UserAbteilungApp.ViewModel
                     else
                     {
                         resultStr = DataWorker.CreateDepartment(DepartmentName);
+
                         UpdateAllDataView();
                         ShowMessageToUser(resultStr);
                         SetNullValuesToProperties();
@@ -250,7 +251,6 @@ namespace UserAbteilungApp.ViewModel
                     {
                         resultStr = DataWorker.CreatePosition(PositionName, PositionSalary, PositionMaxNumber, PositionDepartment);
                         UpdateAllDataView();
-
                         ShowMessageToUser(resultStr);
                         SetNullValuesToProperties();
                         wnd.Close();
@@ -353,12 +353,13 @@ namespace UserAbteilungApp.ViewModel
                     {
                         if (UserPosition != null)
                         {
+
                             resultStr = DataWorker.EditUser(SelectedUser, UserName, UserSurName, UserPhone, UserPosition);
 
                             UpdateAllDataView();
                             SetNullValuesToProperties();
                             ShowMessageToUser(resultStr);
-
+                            window.Close();
                         }
                         else ShowMessageToUser(noPositionStr);
                     }
@@ -383,11 +384,10 @@ namespace UserAbteilungApp.ViewModel
                         if (PositionDepartment != null)
                         {
                             resultStr = DataWorker.EditPosition(SelectedPosition, PositionName, PositionMaxNumber, PositionSalary, PositionDepartment);
-
                             UpdateAllDataView();
                             SetNullValuesToProperties();
                             ShowMessageToUser(resultStr);
-
+                            window.Close();
                         }
                         else ShowMessageToUser(noDepartmentStr);
                     }
@@ -414,7 +414,7 @@ namespace UserAbteilungApp.ViewModel
                         UpdateAllDataView();
                         SetNullValuesToProperties();
                         ShowMessageToUser(resultStr);
-
+                        window.Close();
                     }
                     else ShowMessageToUser(resultStr);
 
